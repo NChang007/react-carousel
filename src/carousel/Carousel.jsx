@@ -1,18 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './carousel.css'
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
-
-const Carousel = () => {
-    let imageList = [
-        "https://images.pexels.com/photos/9444052/pexels-photo-9444052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/18084236/pexels-photo-18084236/free-photo-of-artist-in-her-workshop.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/18057891/pexels-photo-18057891/free-photo-of-young-woman-sitting-on-the-ground-with-rugs-with-traditional-oriental-patterns.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/18173392/pexels-photo-18173392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/18147565/pexels-photo-18147565/free-photo-of-city-people-street-building.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ]
+const Carousel = ({ children: slides }) => {
+  const [curr, setCurr] = useState(0)
+  const prev = () => {
+    setCurr((curr => curr === 0 ? slides.length -1 : curr - 1))
+  }
+  const next = () => {
+    setCurr((curr => curr === slides.length -1 ? 0 : curr + 1))
+  }
   return (
     <div className='carousel'>
-        
+        <div 
+          className='carousel-items'
+          style={{transform: `translateX(-${curr * 100}%)`}}
+        >
+          {/* {slides[curr === 0 ? slides.length -1 : curr - 1]} */}
+          {slides}
+          {/* {slides[curr === slides.length -1 ? 0 : curr + 1]} */}
+        </div>
+        <div className="carousel-navigation">
+          <button 
+            className='carousel-left-btn'
+            onClick={prev}
+          >
+            <FaAngleLeft/>
+          </button>
+          <button 
+            className='carousel-right-btn'
+            onClick={next}
+          >
+            <FaAngleRight/>
+          </button>
+        </div>
     </div>
   )
 }
