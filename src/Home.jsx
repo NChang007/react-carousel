@@ -12,10 +12,13 @@ const Home = () => {
   return (
     <div>
         <Carousel>
-            {imageList.map((i) => (
-                <div  className="carousel-slide">
-                    <img className='carousel-image' src={i}/>
-                </div>
+            {imageList.map((img) => (
+                // <div  className="carousel-slide">
+                //     <img className='carousel-image' src={i}/>
+                // </div>
+                <Carousel.Slides>
+                    <Carousel.Image src={img}/>
+                </Carousel.Slides>
             ))}
         </Carousel>
     </div>
