@@ -16,9 +16,9 @@ const Home = () => {
                 // <div  className="carousel-slide">
                 //     <img className='carousel-image' src={i}/>
                 // </div>
-                <Carousel.Slides>
+                <Carousel.Slide>
                     <Carousel.Image src={img}/>
-                </Carousel.Slides>
+                </Carousel.Slide>
             ))}
         </Carousel>
     </div>

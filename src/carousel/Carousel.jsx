@@ -3,7 +3,7 @@ import './carousel.css'
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 
-const CaroSlides = ({children}) => {
+const CaroSlide = ({children}) => {
   return (
     <div className='carousel-slide'>
       {children}
@@ -59,7 +59,7 @@ const Carousel = ({ children: slides }) => {
     </div>
   )
 }
-Carousel.Slides = CaroSlides
+Carousel.Slide = CaroSlide
 Carousel.Image = CaroImage
 
 export default Carousel

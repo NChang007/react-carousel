@@ -44,3 +44,12 @@
     align-items: center;
     margin: 1rem;
 }
+@media (min-width: 600px) {
+    .carousel-left-btn, 
+    .carousel-right-btn {
+        font-size: 1.5em;
+        width: .8em;
+        height: .8em;
+        background-color: red;
+    }
+}

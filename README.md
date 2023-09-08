@@ -1,4 +1,4 @@
-# Vite Todo List with CRUD
+# React Carousel Component
 
 This is a Carousel component built with Vite, a fast and minimalist development tool for building web applications. The idea is to have easy acess to already created react components to use in other projects. This Carousel is lighweight and fast with minimal code ready to be inplemented in any react site.
 
