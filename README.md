@@ -30,7 +30,7 @@ npm run dev
 
 Make sure to import the carousel and then call it like any other react component
 ex:
-```
+```react
     <Carousel>
         {images.map((img) => (
             <Carousel.slide key={someKey}>
