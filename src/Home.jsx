@@ -11,12 +11,9 @@ const Home = () => {
     ]
   return (
     <div>
-        <Carousel>
-            {imageList.map((img) => (
-                // <div  className="carousel-slide">
-                //     <img className='carousel-image' src={i}/>
-                // </div>
-                <Carousel.Slide>
+        <Carousel autoSlide={true}>
+            {imageList.map((img,idx) => (
+                <Carousel.Slide key={idx}>
                     <Carousel.Image src={img}/>
                 </Carousel.Slide>
             ))}

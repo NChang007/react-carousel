@@ -4,9 +4,11 @@ This is a Carousel component built with Vite, a fast and minimalist development 
 
 ## Features
 
-- Easy to use in re-use
+- Easy to use
 - Auto slides 
 - Supports videos
+- Auto Slides
+- Can change the auto slide interval
 - Responsive to screen size 
 
 ## Installation
@@ -47,7 +49,9 @@ ex:
 The project's folder structure is as follows:
 
     src/: Contains the application's source code.
-        Carousel.jsx: The root component for the Carousel.
+        carousel: this folder hold both the component file and the styles file
+            Carousel.jsx: The root component for the Carousel.
+            carousel.css: The Styles for  the component 
         Home.jsx: This is where we are using our carousel and dynamically feeding it the images.
         main.js: The entry point of the application.
     index.html: The HTML template for the application.
@@ -61,5 +65,6 @@ This project is licensed under the MIT License. Feel free to use and modify the 
 ## Acknowledgements
 
 This Carousel component was developed using the Vite framework.
+I am also using react icons for the free icons
 
 If you have any questions or need further assistance, please feel free to reach out.
